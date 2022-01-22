@@ -1,0 +1,28 @@
+.btn {
+  min-width: 140px;
+  height: 45px;
+  background: $main-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  a {
+    padding: 12px 25px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.btn_bg {
+  background: none;
+  box-shadow: none;
+  &:hover {
+    color: #fff;
+    background: $main-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: 0.75s all;
+  }
+}

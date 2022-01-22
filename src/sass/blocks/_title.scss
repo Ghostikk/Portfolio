@@ -1,0 +1,18 @@
+.title {
+  font-style: normal;
+  font-weight: bold;
+  &__name {
+    position: relative;
+    @include cirle;
+    font-size: 16px;
+    color: #fff;
+    z-index: 2;
+    padding-left: 10px;
+  }
+  &__profession {
+    min-width: 535px;
+    font-size: 48px;
+    color: #000000;
+    margin: 10px 0 25px 0;
+  }
+}

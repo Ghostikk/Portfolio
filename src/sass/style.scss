@@ -1,5 +1,8 @@
 @import "libs/normolize";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+@import "base/variables";
+@import "base/mixins";
 
 * {
   font-family: "Poppins", sans-serif;
@@ -7,6 +10,11 @@
   padding: 0;
 }
 
-body {
-  background-color: aqua;
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
+
+@import "blocks/header";
+@import "blocks/title";
+@import "blocks/btn";
