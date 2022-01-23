@@ -1,6 +1,16 @@
 .header {
-  min-height: 100vh; // растягиваем на всю высоту пользовательского экрана
   position: relative;
+  height: 100vh; // растягиваем на всю высоту пользовательского экрана
   background: url("../img/my_back.jpg") no-repeat 50% / cover;
   padding-top: 205px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
 }

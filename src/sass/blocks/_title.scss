@@ -1,18 +1,21 @@
 .title {
+  position: relative;
   font-style: normal;
   font-weight: bold;
+
+  z-index: 10;
+
   &__name {
     position: relative;
     @include cirle;
-    font-size: 16px;
-    color: #fff;
-    z-index: 2;
+    font-size: 18px;
+    color: $title-color;
     padding-left: 10px;
   }
   &__profession {
     min-width: 535px;
     font-size: 48px;
-    color: #000000;
+    color: $title-color;
     margin: 10px 0 25px 0;
   }
 }

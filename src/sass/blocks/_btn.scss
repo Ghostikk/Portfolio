@@ -2,7 +2,16 @@
   min-width: 140px;
   height: 45px;
   background: $main-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  border: none;
+  z-index: 10;
+  &:hover {
+    background: none;
+    transition: 0.5s all;
+    a {
+      color: #fff;
+    }
+  }
   a {
     padding: 12px 25px;
     font-style: normal;
@@ -10,19 +19,42 @@
     font-size: 14px;
     color: #000000;
     text-decoration: none;
-    &:hover {
-      color: #fff;
-    }
   }
 }
 
 .btn_bg {
-  background: none;
+  letter-spacing: 0;
   box-shadow: none;
-  &:hover {
-    color: #fff;
-    background: $main-color;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: 0.75s all;
-  }
+}
+
+.btn_bg:hover,
+.btn_bg:active {
+  letter-spacing: 2px;
+}
+
+.btn_bg:after,
+.btn_bg:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.btn_bg:hover:after,
+.btn_bg:hover:before {
+  backface-visibility: hidden;
+  border-color: $main-color;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.btn_bg:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
 }
