@@ -1,18 +1,13 @@
-// переключение табов
-$(document).ready(function () {
-  $("ul.section_catalog__tabs").on(
-    "click",
-    "li:not(.active_catalog__tab)",
-    function () {
-      $(this)
-        .addClass("active_catalog__tab")
-        .siblings()
-        .removeClass("active_catalog__tab")
-        .closest("div.wrapper")
-        .find("div.catalog__content")
-        .removeClass("catalog__content_active")
-        .eq($(this).index())
-        .addClass("catalog__content_active");
-    }
-  );
+window.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger"),
+    menu = document.querySelector(".menu"),
+    closeElem = document.querySelector(".menu__close");
+
+  hamburger.addEventListener("click", () => {
+    menu.classList.add("active");
+  });
+
+  closeElem.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
 });
