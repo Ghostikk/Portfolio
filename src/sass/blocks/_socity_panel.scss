@@ -1,0 +1,33 @@
+.socity_panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 340px;
+  position: fixed;
+  align-items: center;
+  left: 50px;
+  top: 225px;
+  z-index: 1;
+  border-right: 2px solid red;
+  &__descr {
+    display: flex;
+    align-items: center;
+    min-height: 150px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000000;
+    transform: rotate(-90deg);
+  }
+  &__line {
+    height: 70px;
+    border: 2px solid #000000;
+  }
+  &__link:nth-child(3) {
+    transform: rotate(90deg);
+  }
+
+  img {
+    width: 25px;
+  }
+}

@@ -214,6 +214,10 @@ template {
   padding: 0;
 }
 
+body {
+  position: relative;
+}
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -289,5 +293,42 @@ template {
   background: #ffa501;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: 0.75s all;
+}
+
+.socity_panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 340px;
+  position: fixed;
+  align-items: center;
+  left: 50px;
+  top: 225px;
+  z-index: 1;
+  border-right: 2px solid red;
+}
+
+.socity_panel__descr {
+  display: flex;
+  align-items: center;
+  min-height: 150px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000;
+  transform: rotate(-90deg);
+}
+
+.socity_panel__line {
+  height: 70px;
+  border: 2px solid #000000;
+}
+
+.socity_panel__link:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+.socity_panel img {
+  width: 25px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,6 +9,9 @@
   margin: 0;
   padding: 0;
 }
+body {
+  position: relative;
+}
 
 .container {
   max-width: 1140px;
@@ -18,3 +21,4 @@
 @import "blocks/header";
 @import "blocks/title";
 @import "blocks/btn";
+@import "blocks/socity_panel";
