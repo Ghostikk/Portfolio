@@ -1,7 +1,8 @@
 .btn {
   min-width: 140px;
   height: 45px;
-  background: $main-color;
+  background: $main-color; // дать прозрачность?
+  // background-color: rgba($color: #3a4959, $alpha: 0.4);
   text-transform: uppercase;
   border: none;
   z-index: 10;

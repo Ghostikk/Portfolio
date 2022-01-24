@@ -1,0 +1,18 @@
+@keyframes rotate-360 {
+  0% {
+    transform: rotate(0) scale(1);
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 230, 0) 25%,
+      rgb(255, 255, 255) 50%,
+      rgba(255, 208, 0, 0.9) 75%
+    );
+  }
+  50% {
+    transform: rotate(180deg) scale(0.5);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}

@@ -31,6 +31,7 @@ span.hamburger_long {
   visibility: hidden; // скрываем
   opacity: 1;
   transition: all 0.5s;
+
   &.active {
     left: 0;
     visibility: visible;
@@ -49,10 +50,16 @@ span.hamburger_long {
     position: absolute;
     top: 25px;
     right: 25px;
-    width: 30px;
-    height: 30px;
+    color: $title-color;
     cursor: pointer;
+    & img {
+      max-width: 20px;
+      &:hover {
+        animation: rotate-360 linear 1s 1;
+      }
+    }
   }
+
   &__list {
     list-style-type: none;
     padding-left: 35px;
@@ -64,6 +71,7 @@ span.hamburger_long {
     line-height: 40px;
     margin-bottom: 15px;
     color: #000;
+    text-decoration: none;
     &::before {
       content: "";
       position: absolute;
@@ -75,6 +83,7 @@ span.hamburger_long {
       border: 1px solid black;
       transition: all 0.5s;
     }
+
     &:hover {
       &::before {
         background-color: #fff;
@@ -84,23 +93,25 @@ span.hamburger_long {
       color: #000;
     }
   }
+
   &__social {
-    min-width: 190px;
+    width: 100%;
     position: absolute;
     bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    & svg {
+    background-color: rgba($color: #ffd63d, $alpha: 0.8);
+    & img {
       width: 2em;
       height: 2em;
-      &:first-child {
-        transform: rotateX(90dec);
-        &:hover {
-          fill: #0077ff;
-        }
+      display: block;
+      margin: 10px 15px;
+      &:hover {
+        border-radius: 50%;
+        background-color: rgb(216, 45, 45);
       }
     }
   }
