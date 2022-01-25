@@ -29,8 +29,7 @@ span.hamburger_long {
   height: 100vh;
   z-index: 11; //
   visibility: hidden; // скрываем
-  opacity: 1;
-  transition: all 0.5s;
+  transition: all 0.5s; //поработать с анимацией
 
   &.active {
     left: 0;
@@ -38,10 +37,10 @@ span.hamburger_long {
     opacity: 1;
   }
   &__block {
-    padding: 150px 0 0 50px;
+    padding: 150px 0 0 0px;
     position: relative;
-    max-width: 250px;
-    background: $main-color;
+    max-width: 280px;
+    background: $main-color; //возможно заменить цвет?
     height: 100%;
     transition: all 0.5s;
     z-index: 10;
@@ -62,35 +61,42 @@ span.hamburger_long {
 
   &__list {
     list-style-type: none;
-    padding-left: 35px;
   }
+  li.menu__list-item {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid ghostwhite;
+    padding: 0 0 0 40px;
+    margin: 0;
+    &:last-child {
+      border: none;
+    }
+    & img {
+      width: 25px;
+      height: 25px;
+      transform: translateX(10%);
+      animation: shake-center 5s ease-in infinite normal;
+    }
+  }
+
   &__link {
     position: relative;
     font-weight: bold;
     font-size: 25px;
     line-height: 40px;
-    margin-bottom: 15px;
+    margin-left: 15px;
     color: #000;
     text-decoration: none;
-    &::before {
-      content: "";
-      position: absolute;
-      left: -35px;
-      top: 10px;
-      width: 15px;
-      height: 15px;
-      border-radius: 100%;
-      border: 1px solid black;
-      transition: all 0.5s;
-    }
 
     &:hover {
       &::before {
         background-color: #fff;
       }
-    }
-    a {
-      color: #000;
+      color: #fff;
+      transition: all 0.3s;
     }
   }
 
@@ -109,10 +115,6 @@ span.hamburger_long {
       height: 2em;
       display: block;
       margin: 10px 15px;
-      &:hover {
-        border-radius: 50%;
-        background-color: rgb(216, 45, 45);
-      }
     }
   }
 

@@ -221,6 +221,44 @@ template {
   }
 }
 
+@keyframes shake-center {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+  10% {
+    transform: rotate(8deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-8deg);
+  }
+  90% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+}
+
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -401,6 +439,10 @@ template {
   border-radius: 50%;
 }
 
+.socity_panel.active {
+  display: none;
+}
+
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -433,7 +475,6 @@ span.hamburger_long {
   height: 100vh;
   z-index: 11;
   visibility: hidden;
-  opacity: 1;
   transition: all 0.5s;
 }
 
@@ -444,9 +485,9 @@ span.hamburger_long {
 }
 
 .menu__block {
-  padding: 150px 0 0 50px;
+  padding: 150px 0 0 0px;
   position: relative;
-  max-width: 250px;
+  max-width: 280px;
   background: #ffa501;
   height: 100%;
   transition: all 0.5s;
@@ -471,7 +512,28 @@ span.hamburger_long {
 
 .menu__list {
   list-style-type: none;
-  padding-left: 35px;
+}
+
+.menu li.menu__list-item {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid ghostwhite;
+  padding: 0 0 0 40px;
+  margin: 0;
+}
+
+.menu li.menu__list-item:last-child {
+  border: none;
+}
+
+.menu li.menu__list-item img {
+  width: 25px;
+  height: 25px;
+  transform: translateX(10%);
+  animation: shake-center 5s ease-in infinite normal;
 }
 
 .menu__link {
@@ -479,29 +541,18 @@ span.hamburger_long {
   font-weight: bold;
   font-size: 25px;
   line-height: 40px;
-  margin-bottom: 15px;
+  margin-left: 15px;
   color: #000;
   text-decoration: none;
 }
 
-.menu__link::before {
-  content: "";
-  position: absolute;
-  left: -35px;
-  top: 10px;
-  width: 15px;
-  height: 15px;
-  border-radius: 100%;
-  border: 1px solid black;
-  transition: all 0.5s;
+.menu__link:hover {
+  color: #fff;
+  transition: all 0.3s;
 }
 
 .menu__link:hover::before {
   background-color: #fff;
-}
-
-.menu__link a {
-  color: #000;
 }
 
 .menu__social {
@@ -521,11 +572,6 @@ span.hamburger_long {
   height: 2em;
   display: block;
   margin: 10px 15px;
-}
-
-.menu__social img:hover {
-  border-radius: 50%;
-  background-color: #d82d2d;
 }
 
 .menu__overlay {

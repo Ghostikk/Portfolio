@@ -9,7 +9,6 @@
   top: 225px;
   border-right: 2px solid $main-color;
   padding-right: 1em;
-
   z-index: 1;
 
   &__descr {
@@ -42,4 +41,8 @@
       border-radius: 50%;
     }
   }
+}
+
+.socity_panel.active {
+  display: none;
 }
