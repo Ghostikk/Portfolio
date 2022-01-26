@@ -45,7 +45,8 @@
   <meta name="theme-color" content="#ffffff">
 
 
-
+  <link rel='stylesheet prefetch'
+    href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -67,7 +68,11 @@
 
   <div class="menu">
     <div class="menu__block">
-      <div class="menu__close"><img src="icons/social/Close.svg" alt="close"></div>
+      <div class="menu__close">
+        <div class="inner">
+          <label>закрыть</label>
+        </div>
+      </div>
 
       <nav>
         <ul class="menu__list">
@@ -103,12 +108,11 @@
       </nav>
 
       <div class="menu__social">
-        <a href="https://vk.com/v_seledkin" target="_blank" class="menu__social-link"><img
-            src="icons/social/menu/vk_logo_menu.svg" alt="vk"></a>
-        <a href="https://www.instagram.com/vladimyr_seledkin" target="_blank" class=" menu__social-link"><img
-            src="icons/social/menu/instagram_logo_menu.svg" alt="instagram"></a>
-        <a href="https://github.com/Ghostikk" target="_blank" class="menu__social-link"><img
-            src="icons/social/menu/github_logo_menu.svg" alt="github"></a>
+        <a href="https://vk.com/v_seledkin" target="_blank" class="menu__social-link"><i class="fa fa-vk fa-2x""></i></a>
+        <a href=" https://www.instagram.com/vladimyr_seledkin" target="_blank" class=" menu__social-link"><i
+              class="fa fa-instagram fa-2x"></i></a>
+        <a href="https://github.com/Ghostikk" target="_blank" class="menu__social-link"><i
+            class="fa fa-github fa-2x"></i></a>
       </div>
     </div>
     <div class="menu__overlay"></div>
@@ -134,6 +138,8 @@
 
 
   <script src="js/script.js"></script>
+
+  <a href="#page_up" class="pageup"><img src="icons/social/arrow.svg" alt="up"></a>
 </body>
 
 </html>
