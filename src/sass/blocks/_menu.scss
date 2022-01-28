@@ -14,28 +14,36 @@
     opacity: 1;
   }
   &__block {
-    padding: 150px 0 0 0px;
     position: relative;
     max-width: 280px;
-    background-color: rgba($color: #fff, $alpha: 0.5);
     height: 100%;
     transition: all 0.5s;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: rgba($color: #fff, $alpha: 0.5);
   }
   &__close {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    width: 50px;
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+    display: flex;
     cursor: pointer;
+    justify-content: center;
+    background-color: rgba($color: #000000, $alpha: 0.8);
     .inner {
-      width: inherit;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 30px;
       label {
         font-size: 0.6em;
         line-height: 4em;
         text-transform: uppercase;
-        color: rgb(0, 0, 0);
+        color: #ffffff;
         font-weight: 700;
         transition: all 0.3s ease-in;
         opacity: 0;
@@ -43,20 +51,17 @@
       }
       &:before,
       &:after {
-        position: absolute;
         content: "";
+        position: absolute;
         height: 2px;
         width: inherit;
         background: #ffc107;
-        left: 0;
         transition: all 0.3s ease-in;
       }
       &:before {
-        top: 50%;
         transform: rotate(45deg);
       }
       &:after {
-        bottom: 50%;
         transform: rotate(-45deg);
       }
     }
@@ -65,7 +70,8 @@
     }
     &:hover .inner:before,
     &:hover .inner:after {
-      transform: rotate(0);
+      transform: rotateZ(0deg);
+      width: 50px;
     }
     &:hover .inner:before {
       top: 0;
@@ -73,9 +79,6 @@
     &:hover .inner:after {
       bottom: 0;
     }
-  }
-  &__list {
-    list-style-type: none;
   }
 
   li.menu__list-item {
@@ -87,6 +90,7 @@
     border-bottom: 1px solid ghostwhite;
     padding: 0 0 0 40px;
     margin: 0;
+    min-height: 8vh;
     &:last-child {
       border: none;
     }
@@ -102,11 +106,9 @@
     position: relative;
     font-weight: bold;
     font-size: 25px;
-    line-height: 60px;
     margin-left: 15px;
     color: #000;
     text-decoration: none;
-
     &:hover {
       &::before {
         background-color: #fff;
@@ -118,10 +120,6 @@
 
   &__social {
     width: 100%;
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;

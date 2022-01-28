@@ -17,6 +17,12 @@
   position: relative;
 }
 
+.diveder {
+  width: 60px;
+  height: 3px;
+  background-color: $main-color;
+}
+
 @import "blocks/header";
 @import "blocks/hamburger";
 @import "blocks/title";
@@ -24,3 +30,4 @@
 @import "blocks/socity_panel";
 @import "blocks/menu";
 @import "blocks/scroll_page";
+@import "blocks/about";
