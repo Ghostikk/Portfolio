@@ -1,0 +1,118 @@
+.education {
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 120px;
+
+  &__subtitle {
+    position: relative;
+    @include cirle;
+    text-align: center;
+    &::before {
+      content: " ";
+      left: 50%;
+      top: -40%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__title {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  &__diveder {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+  }
+}
+
+.resume__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 425px);
+  grid-template-rows: repeat(2, minmax(100px, auto));
+  grid-auto-rows: minmax(100px, auto);
+  padding: 60px 65px 0 65px;
+  column-gap: 135px;
+
+  .resume__column {
+    &-title {
+      position: relative;
+      padding-left: 35px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $main-color;
+      }
+    }
+    ul {
+      list-style-type: none;
+      li {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 1px;
+          height: 100%; // на ширину всего контента
+          top: -8px;
+          left: 7px;
+          background-color: black;
+        }
+      }
+    }
+  }
+}
+
+.resume__item {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 8px;
+    transform: translateY(-50%);
+    height: 1px;
+    background: black;
+    width: 28px;
+  }
+
+  &-head {
+    position: relative;
+    padding: 25px 0 0 100px;
+  }
+
+  &-body {
+    padding-left: 35px;
+    margin-top: 12px;
+  }
+
+  &-icon {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    @include cirle;
+    &::before {
+      top: 10%;
+      left: 10%;
+      transform: translate(-25%, -25%);
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  &-location {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+    margin-top: 5px;
+  }
+}

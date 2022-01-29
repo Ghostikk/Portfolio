@@ -1,6 +1,6 @@
 .about {
   padding-top: 120px;
-  height: 100vh;
+  // height: 100vh;
   &__wrapper {
     display: grid;
     grid-template-columns: 400px 670px;
@@ -18,16 +18,22 @@
 
   &__descr {
     padding-top: 10px;
+    & .diveder {
+      margin: 0;
+    }
   }
 
   &__subtitle {
     position: relative;
+
     @include cirle;
     padding: 1px 0 0 13px;
+    color: #000000;
   }
 
   &__title {
     margin-top: 15px;
+    color: #000000;
   }
 
   &__forme {
@@ -36,5 +42,44 @@
     line-height: 21px;
     color: #000000;
     padding-top: 20px;
+  }
+
+  &__skills {
+    display: grid;
+    align-items: flex-start;
+    grid-template: repeat(2, minmax(85px, auto)) / repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    column-gap: 40px;
+    row-gap: 2em;
+    &-text {
+      margin-top: 5px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &-item {
+      display: grid;
+      grid-template-columns: 40px minmax(200px, auto);
+      column-gap: 20px;
+      grid-template-rows: minmax(40px, 100px);
+      grid-auto-rows: auto;
+      overflow: hidden; // переполнение контейнера
+    }
+    &-circle {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      align-content: center;
+      padding-top: 10px;
+      @include cirle;
+      &:before {
+        content: "";
+        top: 10px;
+        min-width: 40px;
+        min-height: 40px;
+      }
+      & > img {
+        margin: 0 auto;
+      }
+    }
   }
 }
