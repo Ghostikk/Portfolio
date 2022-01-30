@@ -1,5 +1,4 @@
 .education {
-  height: 100vh;
   margin: 0 auto;
   padding-top: 120px;
 
@@ -30,7 +29,7 @@
 .resume__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 425px);
-  grid-template-rows: repeat(2, minmax(100px, auto));
+  // grid-template-rows: repeat(2, minmax(100px, auto));
   grid-auto-rows: minmax(100px, auto);
   padding: 60px 65px 0 65px;
   column-gap: 135px;
@@ -60,7 +59,7 @@
           content: "";
           position: absolute;
           width: 1px;
-          height: 100%; // на ширину всего контента
+          height: calc(100% + 8px); // на ширину всего контента
           top: -8px;
           left: 7px;
           background-color: black;

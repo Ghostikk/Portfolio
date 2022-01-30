@@ -1,0 +1,60 @@
+.experience {
+  margin: 0 auto;
+  padding: 120px;
+
+  &__subtitle {
+    position: relative;
+    @include cirle;
+    text-align: center;
+    &::before {
+      content: " ";
+      left: 50%;
+      top: -40%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__title {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  &__diveder {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  &__wrapper {
+    padding: 60px 10px 0 10px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 270px));
+    grid-auto-rows: minmax(270px, auto);
+    gap: 13px;
+  }
+  &__element {
+    padding: 30px;
+    border: 1px solid #000000;
+
+    &-item {
+      width: 100%;
+      min-height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    &-title {
+      font-weight: bold;
+      padding-top: 20px;
+    }
+
+    &-descr {
+      padding-top: 15px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      color: #000000;
+    }
+  }
+}
