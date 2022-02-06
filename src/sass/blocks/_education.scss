@@ -29,7 +29,6 @@
 .resume__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 425px);
-  // grid-template-rows: repeat(2, minmax(100px, auto));
   grid-auto-rows: minmax(100px, auto);
   padding: 60px 65px 0 65px;
   column-gap: 135px;

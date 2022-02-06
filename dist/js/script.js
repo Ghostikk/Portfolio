@@ -25,4 +25,15 @@ window.addEventListener("DOMContentLoaded", () => {
       menu.classList.remove("active");
     }
   });
+
+  // автоматический пересчет уровня скила в зависимости от %
+  // получаем значения со всех селекторов документа
+  // выбираем ближайщий селектор в котором будет span
+  // перебираем каждый элемент в массиве с конкретным номером [] и меняем инлайн стиль (ширину) в завивсимости от содержимого (innerHTML)
+  const counters = document.querySelectorAll(".experience__progress-percent"),
+    lines = document.querySelectorAll(".experience__progress-strip span");
+
+  counters.forEach((item, i) => {
+    lines[i].style.width = item.innerHTML;
+  });
 });

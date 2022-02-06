@@ -60,7 +60,7 @@
       display: grid;
       grid-template-columns: 40px minmax(200px, auto);
       column-gap: 20px;
-      grid-template-rows: minmax(40px, 100px);
+      grid-template-rows: minmax(40px, 150px);
       grid-auto-rows: auto;
       overflow: hidden; // переполнение контейнера
     }

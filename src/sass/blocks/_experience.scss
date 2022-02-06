@@ -1,6 +1,6 @@
 .experience {
   margin: 0 auto;
-  padding: 120px;
+  padding-top: 120px;
 
   &__subtitle {
     position: relative;
@@ -37,12 +37,15 @@
     border: 1px solid #000000;
 
     &-item {
-      width: 100%;
-      min-height: 65px;
+      height: 65px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      img {
+        max-height: 100%;
+      }
     }
+
     &-title {
       font-weight: bold;
       padding-top: 20px;
@@ -55,6 +58,78 @@
       font-size: 12px;
       line-height: 18px;
       color: #000000;
+    }
+  }
+
+  &__progress {
+    padding-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(350px, 1fr));
+    column-gap: 45px;
+    row-gap: 30px;
+    &-strip {
+      margin: 20px 0 30px 0;
+      width: 350px;
+      height: 14px;
+      background: #e8e4de;
+      border-radius: 4px;
+
+      overflow: hidden;
+
+      & > span {
+        display: block;
+        height: 100%;
+        border-radius: 2px;
+        background-color: rgb(119, 204, 141);
+        position: relative;
+        overflow: hidden;
+      }
+      & > span:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: linear-gradient(
+          -45deg,
+          rgba(255, 255, 255, 0.2) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.2) 75%,
+          transparent 75%,
+          transparent
+        );
+        z-index: 1;
+        background-size: 50px 50px;
+        animation: move 2s linear infinite;
+        border-radius: 2px;
+        overflow: hidden;
+      }
+    }
+
+    .flex_box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-title {
+      font-weight: bold;
+      padding-left: 13px;
+      position: relative;
+      @include cirle;
+      &::before {
+        content: " ";
+        left: 0%;
+        top: 45%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &-percent {
+      font-weight: 600;
     }
   }
 }
