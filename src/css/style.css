@@ -296,6 +296,7 @@ template {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -389,6 +390,12 @@ span.hamburger_long {
   font-size: 48px;
   color: #d2d2d3;
   margin: 10px 0 25px 100px;
+}
+
+.title_fs12 {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 .title_fs14 {
@@ -960,7 +967,7 @@ span.hamburger_long {
   grid-template-columns: repeat(2, 425px);
   grid-auto-rows: minmax(100px, auto);
   padding: 60px 65px 0 65px;
-  column-gap: 135px;
+  justify-content: space-between;
 }
 
 .resume__wrapper .resume__column-title {
@@ -1160,7 +1167,7 @@ span.hamburger_long {
   display: block;
   height: 100%;
   border-radius: 2px;
-  background-color: #77cc8d;
+  background-color: black;
   position: relative;
   overflow: hidden;
 }
@@ -1277,11 +1284,205 @@ span.hamburger_long {
 
 .portfolio__link img {
   width: 100%;
+  filter: saturate(50%);
+  outline: 1px solid black;
 }
 
-.portfolio__link:hover {
+.portfolio__link img:hover {
   transform: scale(1.05);
   transition: 0.6s ease-in-out;
-  filter: saturate(50%);
+  filter: saturate(100%);
+  outline: none;
+  z-index: 1000999;
+}
+
+.price {
+  margin: 0 auto;
+  padding: 120px 0px 0px 0px;
+}
+
+.price__subtitle {
+  position: relative;
+  text-align: center;
+}
+
+.price__subtitle:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: " ";
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffa501;
+  transform: translate(0%, -25%);
+  z-index: -1;
+}
+
+.price__subtitle::before {
+  content: " ";
+  left: 50%;
+  top: -50%;
+  transform: translateX(-50%);
+}
+
+.price__wrapper {
+  padding: 60px 50px 0px 75px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 350px));
+  column-gap: 330px;
+}
+
+.price-title {
+  position: relative;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 200px 140px;
+  justify-content: space-between;
+  align-self: start;
+}
+
+.price-title::before {
+  content: "";
+  position: absolute;
+  left: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffa501;
+}
+
+.price-sum {
+  font-weight: bold;
+  text-align: end;
+}
+
+.price-subtitle {
+  margin: 5px 0 15px 0;
+}
+
+.contacts {
+  padding: 120px 0 90px 0;
+}
+
+.contacts__wrapper {
+  padding: 0 35px 0 35px;
+  display: grid;
+  grid-template-columns: 400px 585px;
+  justify-content: space-between;
+}
+
+.contacts__photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.contacts__descr {
+  padding-top: 6px;
+}
+
+.contacts__descr .diveder {
+  margin: 0;
+  margin-top: 5px;
+}
+
+.contacts__title {
+  position: relative;
+  padding-left: 12px;
+}
+
+.contacts__title:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: " ";
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffa501;
+  transform: translate(0%, -25%);
+  z-index: -1;
+}
+
+.contacts__text, .contacts__social {
+  margin-top: 20px;
+}
+
+.contacts__link {
+  margin-right: 25px;
+}
+
+.contacts__link img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.contacts__link:hover {
+  text-decoration: none;
+}
+
+.contacts__form {
+  margin-top: 30px;
+  display: grid;
+  grid-template: 45px 190px 45px/repeat(2, minmax(200px, 280px));
+  justify-content: space-between;
+  row-gap: 30px;
+  column-gap: 25px;
+}
+
+.contacts__form label {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 15px;
+  height: 18px;
+  padding: 0 8px;
+  background-color: #fff;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.contacts__input {
+  position: relative;
+}
+
+.contacts__input input {
+  display: block;
+  width: 280px;
+  height: 100%;
+  padding: 0 20px;
+  font-size: 12px;
+}
+
+.contacts__textarea {
+  position: relative;
+  grid-column: 1 / 3;
+}
+
+.contacts__textarea textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.contacts__btn {
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0 20px;
+}
+
+.contacts__btn:hover {
+  background: #ffa501;
+  cursor: pointer;
+}
+
+.link-mod {
+  color: #000;
 }
 /*# sourceMappingURL=style.css.map */

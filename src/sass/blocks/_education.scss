@@ -31,8 +31,8 @@
   grid-template-columns: repeat(2, 425px);
   grid-auto-rows: minmax(100px, auto);
   padding: 60px 65px 0 65px;
-  column-gap: 135px;
-
+  // column-gap: 135px;
+  justify-content: space-between;
   .resume__column {
     &-title {
       position: relative;

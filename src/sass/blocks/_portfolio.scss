@@ -46,11 +46,15 @@
   &__link {
     img {
       width: 100%;
-    }
-    &:hover {
-      transform: scale(1.05);
-      transition: 0.6s ease-in-out;
       filter: saturate(50%);
+      outline: 1px solid rgb(0, 0, 0);
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.6s ease-in-out;
+        filter: saturate(100%);
+        outline: none;
+        z-index: 1000999;
+      }
     }
   }
 }
