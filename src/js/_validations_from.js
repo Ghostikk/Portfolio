@@ -1,10 +1,9 @@
 $(document).ready(function () {
-  //Modal
-  // вызов модального окна по классу data
-  $('[data-modal="consultation"]').on("click", function () {
+  /* вызов модального окна с id #thanks при нажатой кнопке в форме */
+  $("form").on("submit", function () {
     $(".overlay, #thanks").fadeIn("slow");
   });
-  // закрытие модального окна для классов (id)
+  /* закрытие модального окна по клину на modal__close */
   $(".modal__close").on("click", function () {
     $(".overlay, #thanks").fadeOut("slow");
   });
@@ -20,13 +19,9 @@ $(document).ready(function () {
       data: $(this).serialize(),
     }).done(function () {
       $(this).find("input").val("");
-      alert("Ваше сообщение отправлено!");
+      // alert("Ваше сообщение отправлено!");
       $("form").trigger("reset");
     });
     return false;
   });
 });
-
-// if (!$(this).valid()) {
-//   return;
-// }
