@@ -37,3 +37,34 @@ window.addEventListener("DOMContentLoaded", () => {
     lines[i].style.width = item.innerHTML;
   });
 });
+
+$(document).ready(function () {
+  /* появления якоря после прокрутки в 550 пикселей*/
+  $("a[href=#page_up]").on("click", function (e) {
+    const anchor = $(this);
+    $("html, body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $(anchor.attr("href")).offset().top,
+        },
+        777
+      );
+    e.preventDefault();
+    return false;
+  });
+  /*скролл  + изменение цвета панели с соц.сетями*/
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 550) {
+      $(".pageup").fadeIn();
+      $(".socity_panel__svg").css("fill", "black");
+      $(".socity_panel__line").css("background", "black");
+      $(".socity_panel__descr").css("color", "black");
+    } else {
+      $(".pageup").fadeOut();
+      $(".socity_panel__svg").css("fill", "white");
+      $(".socity_panel__line").css("background", "white");
+      $(".socity_panel__descr").css("color", "white");
+    }
+  });
+});

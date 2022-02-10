@@ -26,13 +26,14 @@
   }
   &__line {
     height: 70px;
-    border: 1px solid #fff;
+    width: 1px;
+    background: #fff;
   }
   &__link:nth-child(1) {
     transform: rotate(-90deg) translateY(5%);
   }
 
-  &__link > img {
+  &__link > svg {
     width: 25px;
     height: 25px;
 

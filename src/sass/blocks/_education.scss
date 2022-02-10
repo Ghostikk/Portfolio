@@ -86,9 +86,15 @@
     padding: 25px 0 0 100px;
   }
 
+  &-padding:first-child {
+    padding-top: 45px;
+  }
+
   &-body {
     padding-left: 35px;
     margin-top: 12px;
+    font-size: 13px;
+    line-height: 20px;
   }
 
   &-icon {
@@ -103,6 +109,7 @@
     }
     img {
       width: 100%;
+      object-fit: cover;
     }
   }
 
@@ -110,7 +117,8 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    color: #000000;
+    color: rgba(0, 0, 0, 0.8);
     margin-top: 5px;
+    min-height: 35px;
   }
 }

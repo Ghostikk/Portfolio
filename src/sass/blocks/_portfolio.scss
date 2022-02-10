@@ -48,6 +48,7 @@
       width: 100%;
       filter: saturate(50%);
       outline: 1px solid rgb(0, 0, 0);
+      object-fit: cover;
       &:hover {
         transform: scale(1.05);
         transition: 0.6s ease-in-out;

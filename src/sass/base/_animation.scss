@@ -87,3 +87,17 @@
     background-position: 50px 50px;
   }
 }
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg) translate(-0px, -0px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(90deg) translate(0px, 0px);
+  }
+}

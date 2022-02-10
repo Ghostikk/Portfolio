@@ -23,13 +23,16 @@
   margin: 25px auto 0 auto;
 }
 
+body {
+  position: relative;
+}
+
 @import "blocks/header";
 @import "blocks/hamburger";
 @import "blocks/title";
 @import "blocks/btn";
 @import "blocks/socity_panel";
 @import "blocks/menu";
-@import "blocks/scroll_page";
 @import "blocks/about";
 @import "blocks/slider";
 @import "blocks/education";
@@ -37,3 +40,5 @@
 @import "blocks/portfolio";
 @import "blocks/price";
 @import "blocks/contact";
+@import "blocks/footer";
+@import "blocks/modal_windows";

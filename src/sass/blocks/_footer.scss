@@ -1,0 +1,11 @@
+.pageup {
+  display: none;
+  position: fixed;
+  top: 90%;
+  right: 5%;
+
+  img {
+    max-width: 40px;
+    animation: arrow 2s infinite step-end;
+  }
+}
