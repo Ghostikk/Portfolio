@@ -1,0 +1,404 @@
+@media (max-width: 1300px) {
+  .container {
+    max-width: 960px;
+  }
+  .socity_panel {
+    display: none;
+  }
+  .title__profession {
+    font-size: 44px;
+  }
+  .about__wrapper {
+    grid-template-columns: 400px 530px;
+    column-gap: 30px;
+    .about__skills {
+      column-gap: 25px;
+      &-item {
+        overflow: visible;
+        column-gap: 10px;
+      }
+    }
+  }
+  .experience {
+    &__wrapper {
+      grid-template-columns: repeat(3, minmax(270px, auto));
+      justify-content: center;
+    }
+    &__progress {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+      justify-content: space-between;
+    }
+    &__progress .flex_box {
+      width: 100%;
+      padding: 0px 20px 0 20px;
+    }
+    &__progress-strip {
+      margin: 20px 0 30px 0;
+      width: 90%;
+    }
+  }
+  .price__wrapper {
+    justify-content: space-between;
+    gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+  }
+
+  .contacts__wrapper {
+    padding: 0 30px;
+    grid-template-columns: 350px 450px;
+    column-gap: 50px;
+  }
+  .contacts__input input {
+    width: 210px;
+  }
+  .portfolio {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 280px);
+      grid-auto-rows: 250px;
+      justify-content: center;
+      row-gap: 5px;
+      .vertical,
+      .horizont {
+        grid-row: unset;
+        grid-column: unset;
+      }
+      & img {
+        outline: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 800px;
+  }
+  .btn {
+    min-width: 130px;
+  }
+  .title__profession {
+    font-size: 40px;
+  }
+  .about {
+    &__photo {
+      padding-left: 10px;
+    }
+    &__wrapper {
+      grid-template-columns: minmax(100px, 350px) minmax(auto, 400px);
+      row-gap: 20px;
+    }
+    &__forme {
+      font-size: 15px;
+      padding: 15px 0;
+    }
+    &__skills-item.grid-box1 {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+    &__skills .grid-box2 {
+      grid-column: 1/3;
+      grid-row: 2;
+    }
+  }
+
+  .resume__wrapper {
+    padding: 60px 0px 0 0px;
+    grid-template-columns: repeat(2, minmax(300px, 350px));
+    justify-content: center;
+    column-gap: 15px;
+    .resume__item {
+      &::after {
+        content: "";
+        left: 7px;
+        top: 68px;
+        width: 21px;
+      }
+
+      &-location {
+        min-height: 50px;
+      }
+      &-body {
+        max-height: 250px;
+        padding-bottom: 20px;
+      }
+      &-padding {
+        min-height: 125px;
+        &:first-child {
+          padding-top: 30px;
+        }
+      }
+    }
+  }
+
+  .contacts {
+    padding: 50px 0;
+    &__wrapper {
+      padding: 5px;
+      grid-template-columns: minmax(253px, 350px) minmax(200px, 355px);
+      column-gap: 30px;
+    }
+    &__input {
+      grid-column: 1 / 3;
+      input {
+        width: 100%;
+      }
+    }
+    &__triggers {
+      grid-template-columns: 1fr;
+      #message {
+        width: 70%;
+        justify-self: center;
+        padding: 0;
+      }
+    }
+    &__policy {
+      font-size: 13px;
+      padding-top: 10px;
+    }
+    &__form {
+      grid-template-rows: 45px 45px 150px 45px;
+      grid-template-columns: minmax(200px, 280px);
+      row-gap: 30px;
+    }
+    &__text {
+      font-size: 15px;
+    }
+  }
+  .price__wrapper {
+    justify-content: center;
+    padding: 0;
+    padding-top: 50px;
+    column-gap: 35px;
+    grid-template-columns: repeat(auto-fit, 350px);
+    .price-title {
+      grid-template-columns: 200px auto;
+      justify-content: left;
+      &:before {
+        left: -6%;
+      }
+    }
+  }
+  .experience {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 270px);
+    }
+    &__element {
+      padding: 20px;
+      height: 100%;
+    }
+  }
+  .pageup {
+    right: 2%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+    padding: 0 10px;
+  }
+  .about {
+    &__photo {
+      grid-column: 1/3;
+      padding: 0;
+    }
+    &__descr {
+      grid-column: 1/3;
+    }
+    &__skills {
+      column-gap: 5px;
+      &-item {
+        grid-template-columns: 40px minmax(200px, auto);
+      }
+    }
+    &__skills .grid-box1 {
+      grid-row: 1;
+      grid-column: 1/2;
+    }
+    &__skills .grid-box2 {
+      grid-row: 1;
+      grid-column: 2/3;
+    }
+  }
+  .education {
+    padding-top: 50px;
+    .resume__wrapper {
+      grid-template-columns: 1fr;
+    }
+    .resume__column {
+      margin-top: 50px;
+    }
+    .resume__item::after {
+      content: "";
+      width: 40px;
+    }
+  }
+  .experience {
+    &__progress {
+      padding: 0;
+      padding-top: 120px;
+      justify-content: center;
+      &-strip {
+        width: 100%;
+      }
+    }
+    &__progress .flex_box {
+      padding: 0;
+      width: 100%;
+    }
+  }
+  .contacts {
+    &__wrapper {
+      grid-template-columns: minmax(200px, auto);
+      justify-content: center;
+    }
+    &__photo {
+      display: none;
+    }
+  }
+  .contac {
+    text-align: center;
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    &::before {
+      content: " ";
+      left: 50%;
+      top: 0%;
+      transform: translate(-50%, -25%);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .diveder {
+    width: 100%;
+  }
+  .btn_bg {
+    margin-bottom: 10px;
+    &:first-child {
+      margin: 0px;
+      margin-bottom: 10px;
+    }
+  }
+  .wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .title__profession {
+    font-size: 36px;
+    padding: 0;
+  }
+  .title__name {
+    padding-left: 10px;
+    &:before {
+      content: " ";
+      top: 0px;
+      left: 0px;
+    }
+  }
+  .about {
+    padding-top: 50px;
+    &__wrapper {
+      grid-template-columns: 1fr;
+      row-gap: 0;
+      column-gap: 0;
+    }
+    &__title {
+      font-size: 28px;
+      padding: 20px 0;
+      text-align: left;
+    }
+    &__subtitle {
+      padding-top: 20px;
+      &::before {
+        content: "";
+        top: 50%;
+      }
+    }
+    &__forme {
+      font-size: 14px;
+      padding-bottom: 30px;
+    }
+    &__skills {
+      grid-template-columns: minmax(250px, auto);
+      grid-column: 1/3;
+    }
+  }
+  .about__skills.grid-box1 {
+    grid-row: 1;
+    grid-column: 1/3;
+  }
+  .about__skills .grid-box2 {
+    grid-row: 2;
+    grid-column: 1/3;
+  }
+
+  .resume__wrapper {
+    padding: 0px 0 0 0;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .resume__item {
+      &::after {
+        content: none;
+      }
+      &-padding:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .education {
+    &__title {
+      font-size: 28px;
+    }
+  }
+  .experience {
+    padding-top: 50px;
+    &__wrapper {
+      grid-auto-rows: 300px;
+    }
+    &__title {
+      font-size: 28px;
+    }
+  }
+  .portfolio {
+    padding-top: 50px;
+  }
+  .price__wrapper {
+    padding: 60px 0 0 30px;
+    grid-template-columns: repeat(1, minmax(200px, 350px));
+    justify-content: center;
+    .price-title {
+      grid-template-columns: minmax(auto, 180px) 140px;
+      line-height: normal;
+    }
+    .price-subtitle {
+      font-size: 12px;
+    }
+  }
+  .contacts__policy {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    text-align: left;
+    & input {
+      margin-left: 45px;
+      margin-right: 15px;
+    }
+  }
+  .pageup {
+    position: fixed;
+    right: 2%;
+  }
+  .box__wrapper {
+    margin: 0 auto;
+  }
+}

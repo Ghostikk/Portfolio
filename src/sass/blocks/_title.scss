@@ -8,16 +8,21 @@
   &__name {
     position: relative;
     @include cirle;
+    &::before {
+      content: "";
+      left: 88px;
+    }
+
     font-size: 20px;
     color: #fff;
     padding-left: 10px;
-    margin: 0px 0px 0px 100px;
+    padding: 0px 0px 0px 100px;
   }
   &__profession {
-    min-width: 535px;
+    min-width: 200px;
     font-size: 48px;
     color: $title-color;
-    margin: 10px 0 25px 100px;
+    padding: 0px 0px 0px 100px;
   }
 
   &_fs12 {

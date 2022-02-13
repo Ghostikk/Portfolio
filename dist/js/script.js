@@ -1,15 +1,16 @@
 window.addEventListener("DOMContentLoaded", () => {
+  /*объявляем переменные*/
   const hamburger = document.querySelector(".hamburger"),
     overlay = document.querySelector(".menu__overlay"),
     menu = document.querySelector(".menu"),
     closeElem = document.querySelector(".menu__close"),
     socity = document.querySelector(".socity_panel");
-
+  /*по клику на переменную hamburger добавляем класс активности в menu и socity*/
   hamburger.addEventListener("click", () => {
     menu.classList.add("active");
     socity.classList.add("active");
   });
-
+  /* убираем класс активности у переменных по клику на overlay*/
   overlay.addEventListener("click", () => {
     menu.classList.remove("active");
     socity.classList.remove("active");
@@ -19,17 +20,16 @@ window.addEventListener("DOMContentLoaded", () => {
     menu.classList.remove("active");
     socity.classList.remove("active");
   });
-
+  /* убираем класс активности при нажамии на Esc */
   window.addEventListener("keydown", (e) => {
     if (e.key == "Escape") {
       menu.classList.remove("active");
     }
   });
 
-  // автоматический пересчет уровня скила в зависимости от %
-  // получаем значения со всех селекторов документа
-  // выбираем ближайщий селектор в котором будет span
-  // перебираем каждый элемент в массиве с конкретным номером [] и меняем инлайн стиль (ширину) в завивсимости от содержимого (innerHTML)
+  /* автоматический пересчет уровня скила в зависимости от % получаем значения со всех селекторов документа
+  выбираем ближайщий селектор в котором будет span  перебираем каждый элемент в массиве с конкретным номером []
+   и меняем инлайн стиль (ширину) в завивсимости от содержимого (innerHTML)*/
   const counters = document.querySelectorAll(".experience__progress-percent"),
     lines = document.querySelectorAll(".experience__progress-strip span");
 
@@ -66,5 +66,30 @@ $(document).ready(function () {
       $(".socity_panel__line").css("background", "white");
       $(".socity_panel__descr").css("color", "white");
     }
+  });
+  /* вызов модального окна с id #thanks при нажатой кнопке в форме */
+  $("form").on("submit", function () {
+    $(".overlay, #thanks").fadeIn("slow");
+  });
+  /* закрытие модального окна по клину на modal__close */
+  $(".modal__close").on("click", function () {
+    $(".overlay, #thanks").fadeOut("slow");
+  });
+
+  // отправка формы на сервер
+  $("form").submit(function (e) {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      resetForm: "true",
+      timeout: 2000,
+      data: $(this).serialize(),
+    }).done(function () {
+      $(this).find("input").val("");
+      /* alert("Ваше сообщение отправлено!"); - на всякий случай, если бы модальное окно не заработало*/
+      $("form").trigger("reset");
+    });
+    return false;
   });
 });
