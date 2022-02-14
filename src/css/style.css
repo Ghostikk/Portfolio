@@ -2023,6 +2023,9 @@ label#text-error {
     width: 100% !important;
     font-size: 12px;
   }
+  #thanks {
+    width: 90%;
+  }
 }
 
 @media (max-width: 400px) {
