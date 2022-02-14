@@ -82,6 +82,7 @@
   .title__profession {
     font-size: 40px;
   }
+
   .about {
     &__photo {
       padding-left: 10px;
@@ -107,28 +108,20 @@
   .resume__wrapper {
     padding: 60px 0px 0 0px;
     grid-template-columns: repeat(2, minmax(300px, 350px));
-    justify-content: center;
-    column-gap: 15px;
+    justify-content: space-around;
+    & .resume__column ul > li {
+      min-height: 225px;
+    }
     .resume__item {
-      &::after {
-        content: "";
-        left: 7px;
-        top: 68px;
-        width: 21px;
-      }
-
-      &-location {
-        min-height: 50px;
-      }
-      &-body {
-        max-height: 250px;
-        padding-bottom: 20px;
-      }
-      &-padding {
+      &-head {
         min-height: 125px;
-        &:first-child {
-          padding-top: 30px;
-        }
+      }
+      &-padding:first-child {
+        min-height: 130px;
+      }
+      &-icon {
+        top: 39%;
+        left: 12%;
       }
     }
   }
@@ -189,6 +182,9 @@
       padding: 20px;
       height: 100%;
     }
+    &__progress {
+      padding: 60px 10px 0px 10px;
+    }
   }
   .pageup {
     right: 2%;
@@ -226,20 +222,18 @@
   .education {
     padding-top: 50px;
     .resume__wrapper {
+      padding: 0;
       grid-template-columns: 1fr;
     }
     .resume__column {
       margin-top: 50px;
     }
     .resume__item::after {
-      content: "";
-      width: 40px;
+      width: 47px;
     }
   }
   .experience {
     &__progress {
-      padding: 0;
-      padding-top: 120px;
       justify-content: center;
       &-strip {
         width: 100%;
@@ -313,7 +307,7 @@
       column-gap: 0;
     }
     &__title {
-      font-size: 28px;
+      font-size: 27px;
       padding: 20px 0;
       text-align: left;
     }
@@ -342,22 +336,15 @@
     grid-column: 1/3;
   }
 
-  .resume__wrapper {
-    padding: 0px 0 0 0;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    .resume__item {
-      &::after {
-        content: none;
-      }
-      &-padding:first-child {
-        padding-top: 0;
-      }
-    }
-  }
-
   .education {
     &__title {
       font-size: 28px;
+    }
+    .resume__item::after {
+      max-width: 6.5%;
+    }
+    .resume__wrapper .resume__item-icon {
+      left: 10%;
     }
   }
   .experience {
@@ -371,27 +358,61 @@
   }
   .portfolio {
     padding-top: 50px;
-  }
-  .price__wrapper {
-    padding: 60px 0 0 30px;
-    grid-template-columns: repeat(1, minmax(200px, 350px));
-    justify-content: center;
-    .price-title {
-      grid-template-columns: minmax(auto, 180px) 140px;
-      line-height: normal;
+    &__wrapper {
+      padding-top: 40px;
     }
-    .price-subtitle {
-      font-size: 12px;
+    &__title {
+      font-size: 28px;
     }
   }
+  .price {
+    padding-top: 70px;
+    &__wrapper {
+      padding: 40px 0 0 30px;
+      grid-template-columns: repeat(1, minmax(200px, 350px));
+      justify-content: center;
+      .price-title {
+        grid-template-columns: minmax(auto, 180px) 140px;
+        line-height: normal;
+      }
+      .price-subtitle {
+        font-size: 12px;
+      }
+    }
+  }
+
   .contacts__policy {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 25% auto;
     justify-content: space-between;
     text-align: left;
     & input {
-      margin-left: 45px;
-      margin-right: 15px;
+      justify-self: end;
+    }
+  }
+
+  .menu {
+    &__block {
+      height: 100vh;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    &__link:hover {
+      color: #000 !important;
+    }
+    & li.menu__list-item {
+      border-bottom: 1px solid #000;
+    }
+    &__social-link i.fa {
+      transition: none;
+      &:hover {
+        color: white;
+        box-shadow: none;
+        font-size: xx-large;
+      }
+    }
+    &__close .inner:before,
+    &__close .inner:after {
+      transition: none;
     }
   }
   .pageup {
@@ -400,5 +421,22 @@
   }
   .box__wrapper {
     margin: 0 auto;
+  }
+  #message {
+    width: 100% !important;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .education .resume__item::after {
+    width: 5.5%;
+  }
+  .resume__item-head {
+    padding-left: 25%;
+    padding-top: 5%;
+  }
+  .resume__item-padding:first-child {
+    padding-top: 5%;
   }
 }

@@ -4,10 +4,10 @@
   .slaider {
     background-color: #ddd;
     width: inherit;
-    height: inherit;
+    height: 100%;
     .slaides {
       position: absolute;
-      height: inherit;
+      height: 100%;
       transition: transform ease-in-out 1s, opacity ease-in-out 1s;
     }
     .slaide1 {
