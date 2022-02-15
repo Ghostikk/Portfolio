@@ -799,6 +799,15 @@ span.hamburger_long {
   line-height: 21px;
   color: #000000;
   padding-top: 20px;
+  text-align: justify;
+}
+
+.about__forme a {
+  text-decoration: none;
+}
+
+.about__forme a:hover {
+  color: blueviolet;
 }
 
 .about__skills {
@@ -1053,6 +1062,7 @@ span.hamburger_long {
   margin-top: 12px;
   font-size: 13px;
   line-height: 20px;
+  text-align: justify;
 }
 
 .resume__item-icon {
@@ -1546,8 +1556,8 @@ span.hamburger_long {
 .pageup {
   display: none;
   position: fixed;
-  top: 90%;
-  right: 5%;
+  top: 95%;
+  right: 2%;
 }
 
 .pageup img {
@@ -1648,7 +1658,7 @@ label#text-error {
     justify-content: center;
   }
   .experience__progress {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 350px));
     justify-content: space-between;
   }
   .experience__progress .flex_box {
@@ -1796,9 +1806,6 @@ label#text-error {
   .experience__progress {
     padding: 60px 10px 0px 10px;
   }
-  .pageup {
-    right: 2%;
-  }
 }
 
 @media (max-width: 768px) {
@@ -1914,7 +1921,6 @@ label#text-error {
   .about__title {
     font-size: 27px;
     padding: 20px 0;
-    text-align: left;
   }
   .about__subtitle {
     padding-top: 20px;
@@ -1943,6 +1949,7 @@ label#text-error {
     font-size: 28px;
   }
   .education .resume__item::after {
+    top: 63px;
     max-width: 6.5%;
   }
   .education .resume__wrapper .resume__item-icon {
@@ -1966,6 +1973,13 @@ label#text-error {
   .portfolio__title {
     font-size: 28px;
   }
+  .portfolio__link img {
+    filter: none;
+  }
+  .portfolio__link img:hover {
+    transform: none;
+    transition: initial;
+  }
   .price {
     padding-top: 70px;
   }
@@ -1977,6 +1991,9 @@ label#text-error {
   .price__wrapper .price-title {
     grid-template-columns: minmax(auto, 180px) 140px;
     line-height: normal;
+  }
+  .price__wrapper .price-title::before {
+    left: -10%;
   }
   .price__wrapper .price-subtitle {
     font-size: 12px;
@@ -2011,10 +2028,6 @@ label#text-error {
   .menu__close .inner:before,
   .menu__close .inner:after {
     transition: none;
-  }
-  .pageup {
-    position: fixed;
-    right: 2%;
   }
   .box__wrapper {
     margin: 0 auto;
