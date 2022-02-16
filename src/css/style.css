@@ -1910,6 +1910,10 @@ label#text-error {
     top: 0px;
     left: 0px;
   }
+  .menu__link {
+    display: block;
+    width: 100%;
+  }
   .about {
     padding-top: 50px;
   }
