@@ -137,3 +137,5 @@ dist
 
 ### PHP ###
 /src/mailer/
+
+dist
