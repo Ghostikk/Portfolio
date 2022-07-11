@@ -6,6 +6,7 @@
     position: relative;
     @include cirle;
     text-align: center;
+
     &::before {
       content: " ";
       left: 50%;
@@ -49,8 +50,9 @@
       filter: saturate(50%);
       outline: 1px solid rgb(0, 0, 0);
       object-fit: cover;
+
       &:hover {
-        transform: scale(1.05);
+        transform: scale(0.95);
         transition: 0.6s ease-in-out;
         filter: saturate(100%);
         outline: none;
