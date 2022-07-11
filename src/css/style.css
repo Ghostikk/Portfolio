@@ -896,7 +896,8 @@ span.hamburger_long {
 }
 
 .slider__wrapper .slaider .slaide3 {
-  background: url("../img/my_avatar_mode.jpg") center center/cover no-repeat;
+  background: url("../img/My_avatar_3.jpg") center center/cover no-repeat;
+  rotate: 90deg;
 }
 
 .slider__wrapper .controls {

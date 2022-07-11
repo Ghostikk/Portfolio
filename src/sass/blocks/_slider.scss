@@ -1,27 +1,32 @@
 .slider__wrapper {
   height: 100%;
   position: relative;
+
   .slaider {
     background-color: #ddd;
     width: inherit;
     height: 100%;
+
     .slaides {
       position: absolute;
       height: 100%;
       transition: transform ease-in-out 1s, opacity ease-in-out 1s;
     }
+
     .slaide1 {
-      background: url("../img/My_avatar_correct.jpg") center center/cover
-        no-repeat;
+      background: url("../img/My_avatar_correct.jpg") center center/cover no-repeat;
     }
+
     .slaide2 {
-      background: url("../img/my_avatar_winter.jpg") center center/cover
-        no-repeat;
+      background: url("../img/my_avatar_winter.jpg") center center/cover no-repeat;
     }
+
     .slaide3 {
-      background: url("../img/my_avatar_mode.jpg") center center/cover no-repeat;
+      background: url('../img/My_avatar_3.jpg') center center/cover no-repeat;
+      rotate: (90deg);
     }
   }
+
   & .controls {
     position: absolute;
     left: 45%;
@@ -29,9 +34,11 @@
     transform: translateX(-25%);
     z-index: 1;
   }
+
   & input {
     display: none;
   }
+
   & label {
     width: 8px;
     height: 8px;
@@ -41,6 +48,7 @@
     margin: 20px 8px 0;
     transition: background ease-in-out 0.25s;
     border-radius: 25%;
+
     &:after {
       content: " ";
       display: block;
@@ -53,17 +61,18 @@
       left: -4px;
     }
   }
+
   & label:hover,
-  #slaide1:checked ~ .controls label:nth-of-type(1),
-  #slaide2:checked ~ .controls label:nth-of-type(2),
-  #slaide3:checked ~ .controls label:nth-of-type(3) {
+  #slaide1:checked~.controls label:nth-of-type(1),
+  #slaide2:checked~.controls label:nth-of-type(2),
+  #slaide3:checked~.controls label:nth-of-type(3) {
     background: $main-color;
   }
 }
 
-#slaide1:checked ~ .slaider > .slaide1,
-#slaide2:checked ~ .slaider > .slaide2,
-#slaide3:checked ~ .slaider > .slaide3 {
+#slaide1:checked~.slaider>.slaide1,
+#slaide2:checked~.slaider>.slaide2,
+#slaide3:checked~.slaider>.slaide3 {
   position: relative;
   opacity: 1;
   z-index: 1;
