@@ -61,7 +61,7 @@ window.addEventListener("DOMContentLoaded", () => {
               imgPopup.style.display = 'flex';
               const path = target.parentNode.getAttribute('href');
               bigImage.setAttribute('src', path);
-              bigImage.style.maxWidth ='50%';
+              bigImage.style.maxWidth ='70%';
               bigImage.style.height ='auto';
               document.body.style.overflow = 'hidden';
               subTitle.forEach(item => item.style.display = 'none');
