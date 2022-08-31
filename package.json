@@ -31,6 +31,7 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "gulp-htmlmin": "^5.0.1",
     "jquery": "^3.6.1",
     "jquery-validation": "^1.19.5",
     "jquery.maskedinput": "^1.4.1"
